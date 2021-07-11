@@ -1,1 +1,14 @@
-<p>{{@model.user.name}}</p>
+<div class="feed">
+	{{#each @model.feeds as |feed|}}
+		<div class="feed-item">
+			<h2>{{feed.title}}</h2>
+			{{#if (type feed.feedType)}}
+				<img src={{feed.url}} alt={{feed.title}} style="width: 400px; height: 400px;" />
+				<p>Size: {{feed.formatted}}</p>
+			{{else}}
+				<iframe width="400" height="400" src={{feed.url}}></iframe>
+				<p>Length: {{feed.formatted}}</p>
+			{{/if}}
+		</div>
+	{{/each}}
+</div>

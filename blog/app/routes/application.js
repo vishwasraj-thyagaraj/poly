@@ -2,6 +2,6 @@ import Route from '@ember/routing/route';
 
 export default class ApplicationRoute extends Route {
 	model() {
-		return this.store.findRecord('user', 2);
+		return this.store.findRecord('user', 1);
 	}
 }

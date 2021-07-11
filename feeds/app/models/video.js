@@ -4,6 +4,6 @@ import Feed from './feed';
 export default class Video extends Feed {
   @attr('number') length;
   get formatted() {
-    return `${this.length/60} hour(s)`;
+    return `${parseFloat(this.length/60).toFixed(1)} hour(s)`;
   }
 }

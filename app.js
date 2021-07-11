@@ -5,9 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser')
 
-var feedsRouter = require('./routes/feeds');
-var postsRouter = require('./routes/posts');
-var usersRouter = require('./routes/users');
+var router = require('./routes/index');
 
 var app = express();
 
@@ -15,10 +13,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-
-app.use('/feeds', feedsRouter);
-app.use('/users', usersRouter);
-app.use('/posts', postsRouter);
+app.use('/', router);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

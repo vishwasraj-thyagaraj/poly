@@ -1,0 +1,12 @@
+.feed {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.feed-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
