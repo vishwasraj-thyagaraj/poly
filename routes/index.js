@@ -63,8 +63,7 @@ router.get('/users/2', function(req, res, next) {
     user: { 
       id: 1, 
       name: 'User 2',
-      feeds,
-      // feeds: feedsData
+      feeds
     },
   });
 });
