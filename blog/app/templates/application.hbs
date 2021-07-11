@@ -1,10 +1,17 @@
-<h2>Posts</h2>
-{{#each @model.posts as |post|}}
-	<p>{{post.title}}</p>
-	<p>{{post.description}}</p>
-{{/each}}
-
-<h2>Bookmarks</h2>
-{{#each @model.bookmarks as |bookmark|}}
-	<p><a href={{bookmark.url}}>{{bookmark.name}}</a></p>
-{{/each}}
+<div class="grid">
+	<div class="grid-item">
+		<h2>Posts</h2>
+		{{#each @model.posts as |post|}}
+		<div class="grid-child-item">
+			<h3>{{post.title}}</h3>
+			<p>{{post.description}}</p>
+		</div>
+		{{/each}}
+	</div>
+	<div class="grid-item">
+		<h2>Bookmarks</h2>
+		{{#each @model.bookmarks as |bookmark|}}
+		<p class="grid-child-item"><a href={{bookmark.url}}>{{bookmark.name}}</a></p>
+		{{/each}}
+	</div>
+</div>
